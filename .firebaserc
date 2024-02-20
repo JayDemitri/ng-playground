@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "repairpad-playground": {
+      "hosting": {
+        "ngp": [
+          "repairpad-playground"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "repairpad-playground"
+  }
+}

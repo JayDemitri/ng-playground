@@ -1,0 +1,9 @@
+@use "sass:map";
+@use "@angular/material" as mat;
+
+@use "./all" as themes;
+
+.dark-theme {
+    @include mat.all-component-themes(themes.$ngp-dark-theme);
+}
+

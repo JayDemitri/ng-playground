@@ -1,0 +1,30 @@
+@use "sass:map";
+@use "@angular/material" as mat;
+
+$ngp-typography: mat.define-typography-config();
+
+// Define light theme
+$ngp-light-primary: mat.define-palette(mat.$light-blue-palette);
+$ngp-light-accent: mat.define-palette(mat.$grey-palette);
+$ngp-light-warn: mat.define-palette(mat.$red-palette, 500);
+$ngp-light-theme: mat.define-light-theme((
+    color: (
+        primary: $ngp-light-primary,
+        accent: $ngp-light-accent,
+        warn: $ngp-light-warn,
+    ),
+    typography: $ngp-typography,
+));
+
+// Define dark theme
+$ngp-dark-primary: mat.define-palette(mat.$blue-gray-palette);
+$ngp-dark-accent: mat.define-palette(mat.$blue-palette, 900);
+$ngp-dark-warn: mat.define-palette(mat.$red-palette, A700);
+$ngp-dark-theme: mat.define-dark-theme((
+    color: (
+        primary: $ngp-dark-primary,
+        accent: $ngp-dark-accent,
+        warn: $ngp-dark-warn,
+    ),
+    typography: $ngp-typography 
+    ));

@@ -1,0 +1,14 @@
+// Custom Theming for Angular Material
+@use '@angular/material' as mat;
+@use "./themes/all" as themes;
+
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Include theme styles for core and each component used in your app.
+@include mat.all-component-themes(themes.$ngp-light-theme);
+
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+// @include mat.core-theme($my-app-theme);
+// @include mat.button-theme($my-app-theme);

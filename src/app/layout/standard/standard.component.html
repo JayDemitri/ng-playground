@@ -1,0 +1,38 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+        (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span class="example-m-spacer"></span>
+    <span>Angular Playground</span>
+    <span class="example-spacer"></span>
+    <button mat-button class="link" routerLink="home">Home</button>
+    <button mat-button class="link" routerLink="playground">Portfolio</button>
+    <button mat-button class="link" routerLink="contact">Contact</button>
+    <button mat-button class="link" routerLink="landing">Landing</button>
+    <button mat-icon-button aria-label="Example" (click)="clearStore()">
+        <mat-icon>settings</mat-icon>
+    </button>
+</mat-toolbar>
+
+<mat-drawer-container class="content-container mat-app-background" autosize>
+    <mat-drawer #drawer mode="side" class="sidenav">
+        <mat-list role="list">
+            <mat-list-item role="listitem">
+                <button mat-button routerLink="home">Home</button>
+            </mat-list-item>
+            <mat-list-item role="listitem">
+                <button mat-button routerLink="playground">Playground</button>
+            </mat-list-item>
+            <mat-list-item role="listitem">
+                <button mat-button routerLink="404-not-found">Not Found</button>
+            </mat-list-item>
+            <mat-list-item role="listitem">
+                <button mat-button routerLink="landing">Landing</button>
+            </mat-list-item>
+        </mat-list>
+    </mat-drawer>
+
+    <router-outlet></router-outlet>
+
+</mat-drawer-container>

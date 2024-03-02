@@ -83,6 +83,23 @@ Now that we have added everything we need for our skeleton we can update our con
         - landing | bit rough aroun the edge but has a basic format
         - error | very very simple error page
         - coming soon | Added but not updated will work as second version of landing page
+    - Updated routes so that all components are routed and working in the application
+
+### Started working on features
+
+Now that all of the basics are here we need to start joining them together for a meaningful purpose. 
+
+- Started fully integrating @angular/material
+    - Made basic darkmode
+    - Added budle ejection so that css styles are seperated 
+    - Updated standard component navigation to interact with darkmode service
+    - Updated the theme-manager.service so now functional
+        - it will check for saved preset in the browser storage
+        - followed by checking for an os preset dark/light
+        - else will falback to default light theme.
+        - Once theme is set its saved to localstorage for quick access next time
+        - the styles in the page are loaded
+        - the signal notifies all interested parties
 
 
 

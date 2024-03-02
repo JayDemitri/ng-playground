@@ -6,31 +6,39 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { ThemeManagerService } from '../../shared/services/theme-manager.service';
 import { BrowserStorageService } from '../../shared/services/browser-storage.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'ngp-standard',
   standalone: true,
   imports: [
+    CommonModule,
     RouterOutlet,
     RouterLink,
     MatButtonModule,
     MatIconModule,
     MatListModule,
     MatSidenavModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatSlideToggleModule
   ],
   templateUrl: './standard.component.html',
   styleUrl: './standard.component.scss'
 })
 export class StandardComponent {
-  
-    themeManager = inject(ThemeManagerService);
 
-    bs = inject(BrowserStorageService)
+  themeService: ThemeManagerService = inject(ThemeManagerService)
 
-    clearStore(){
-      this.bs.clear()
-    }
+  bs = inject(BrowserStorageService)
+
+  clearStore(): void {
+    this.bs.clear()
+  }
+
+  toggleTheme(): void {
+    this.themeService.updateTheme()
+  }
 }

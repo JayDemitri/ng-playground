@@ -3,7 +3,7 @@
 
 @use "./all" as themes;
 
-.dark-theme {
+.dark-mode {
     @include mat.all-component-themes(themes.$ngp-dark-theme);
 }
 

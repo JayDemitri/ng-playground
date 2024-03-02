@@ -10,8 +10,25 @@
     <button mat-button class="link" routerLink="playground">Portfolio</button>
     <button mat-button class="link" routerLink="contact">Contact</button>
     <button mat-button class="link" routerLink="landing">Landing</button>
-    <button mat-icon-button aria-label="Example" (click)="clearStore()">
-        <mat-icon>settings</mat-icon>
+    <button mat-button (click)="clearStore()">Clear Store</button>
+    <mat-slide-toggle (toggleChange)="toggleTheme()"
+            [checked]="themeService.themeSignal() === 'dark' ? true: false">
+            @if(themeService.themeSignal() === 'dark'){
+            <p>
+                Turns Lights On
+            </p>
+            }@else{
+            <p>
+                Turn Lights Off
+            </p>
+            }
+        </mat-slide-toggle>
+    <button mat-icon-button>
+        @if(themeService.themeSignal() === 'dark'){
+        <mat-icon>bedtime</mat-icon>
+        }@else{
+        <mat-icon>brightness_5</mat-icon>
+        }
     </button>
 </mat-toolbar>
 

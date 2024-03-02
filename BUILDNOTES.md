@@ -50,14 +50,39 @@ Now that we have added everything we need for our skeleton we can update our con
 
 ### Generate the basics
 
+- Generated 3 basic layouts
+    - **centered** | Centered content with some flexbox magic
+    - **empty** | Where the content will control its own layout
+    - **standard** | You typical header/footer layout
+- Generated basic components that make pages for routing 
+    - error/not-found
+    - landing
+    - pages/home
+    - playground
+        - /todo
+- Setup routing using our layouts current routes are
+    - url/ < redirects to landing>
+    - url/home < uses standard layout>
+    - url/landing < uses empty layout>
+    - url/404-not-found < uses centered layout>
+- Added very basic standard layout with angular material responsive nav 
+- Added very basic styles to centered layout
+- Started adding more content then lost track with what I was doing as didnt log here so will now attempt to update
+    - Updated centered layout to centre all content on the basis of a full screen background. the inner content will be responsible for controlling its outputed size?
+    - Updated standard layout component with navigation links and some very simple responsive layout
+    - Added empty layout
+    - Added images
+        - Basic logo
+        - 2 background images
+    - Added first of the shared services although they may be put into the core and extended for shared access 
+        - Browser-storage service handles data being stored in the browser
+        - theme-manager service does what it says which for the time being is dark and light mode with themes coming soon 
+    - Worked on some of the demo content
+        - playground/todo | nothing changed
+        - home | has the starts of  portfolio/developer home page there
+        - landing | bit rough aroun the edge but has a basic format
+        - error | very very simple error page
+        - coming soon | Added but not updated will work as second version of landing page
 
 
-<!-- - [] Setup basic routes
-- [] Setup layouts
-- [] Setup angular/material
-- [] Setup foundation-sites
-- [] Add SEO
-- [] Add Basic Demo content
-- [] 
-- [] 
-- []  -->
+

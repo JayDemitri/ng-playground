@@ -30,7 +30,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles/styles.scss"
+              "src/styles/styles.scss",
+              {
+                "bundleName": "dark-theme",
+                "inject": false,
+                "input": "src/styles/themes/dark.scss"
+              }
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
@@ -50,7 +55,7 @@
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumError": "1mb"
                 }
               ],
               "outputHashing": "all"
@@ -101,7 +106,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles/styles.scss"
+              "src/styles/styles.scss",
+              {
+                "bundleName": "dark-theme",
+                "inject": false,
+                "input": "src/styles/themes/dark.scss"
+              }
             ],
             "stylePreprocessorOptions": {
               "includePaths": [

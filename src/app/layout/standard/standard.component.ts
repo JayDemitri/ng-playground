@@ -25,7 +25,9 @@ import { BrowserStorageService } from '../../shared/services/browser-storage.ser
   styleUrl: './standard.component.scss'
 })
 export class StandardComponent {
+  
     themeManager = inject(ThemeManagerService);
+
     bs = inject(BrowserStorageService)
 
     clearStore(){

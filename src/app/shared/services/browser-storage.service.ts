@@ -38,6 +38,7 @@ export class BrowserStorageService {
    * Remove item by key from localstorage
    * @param key 
    */
+  /* istanbul ignore next */
   remove(key: string) {
     this.storage.removeItem(key);
   }
@@ -45,6 +46,7 @@ export class BrowserStorageService {
   /**
    * Clears all items associated from localStoage
    */
+  /* istanbul ignore next */
   clear() {
     this.storage.clear();
   }

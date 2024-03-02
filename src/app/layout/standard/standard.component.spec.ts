@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { RouterTestingModule } from '@angular/router/testing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { StandardComponent } from './standard.component';
 
 describe('StandardComponent', () => {
@@ -8,10 +9,14 @@ describe('StandardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [StandardComponent]
+      imports: [
+        RouterTestingModule,
+        BrowserAnimationsModule,
+        StandardComponent
+      ]
     })
-    .compileComponents();
-    
+      .compileComponents();
+
     fixture = TestBed.createComponent(StandardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

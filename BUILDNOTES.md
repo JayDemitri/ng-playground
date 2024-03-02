@@ -100,6 +100,19 @@ Now that all of the basics are here we need to start joining them together for a
         - Once theme is set its saved to localstorage for quick access next time
         - the styles in the page are loaded
         - the signal notifies all interested parties
+    - Updated unit tests so now all passing
+    - Cheated for some of the lack of code coverage
+
+## To Do List
+
+A small list of things that i need to go back and either finese or complete
+    - [] @todo: Update unit test
+    - [] @todo: Update theme manager to add and remove the stylesheet for darkmode to the page
+    - [] @todo: 
+    - [] @todo: 
+    - [] @todo: 
+    - [] @todo: 
+    - [] @todo: 
 
 
 

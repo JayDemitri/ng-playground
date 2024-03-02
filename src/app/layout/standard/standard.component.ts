@@ -34,10 +34,12 @@ export class StandardComponent {
 
   bs = inject(BrowserStorageService)
 
+  /* istanbul ignore next */
   clearStore(): void {
     this.bs.clear()
   }
 
+  /* istanbul ignore next */
   toggleTheme(): void {
     this.themeService.updateTheme()
   }

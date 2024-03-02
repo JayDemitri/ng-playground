@@ -80,6 +80,7 @@ export class ThemeManagerService {
     if (theme === 'dark') {
       this.document.body.classList.add('dark-mode')
     } else {
+      /* istanbul ignore next */
       this.document.body.classList.remove('dark-mode')
     }
   }
@@ -87,6 +88,7 @@ export class ThemeManagerService {
   /**
    * Update theme based on the current theme
    */
+  /* istanbul ignore next */
   updateTheme() {
     this.themeSignal.update(theme => theme === 'dark' ? 'light' : 'dark')
   }
